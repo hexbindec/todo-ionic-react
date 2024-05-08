@@ -47,7 +47,7 @@ const Todo: React.FC = () => {
       }
     }
 
-    // Update the todoList state array with the final values of the finalTodoArray
+    // Update the todoList state array with the final values of the tempArray
     // In other words, the todoList state array will contain all items except the one we just deleted
     setTodoList(tempArray);
   };
