@@ -32,17 +32,12 @@ const Todo: React.FC = () => {
   // Function will add the user's input to the todoList state array
   const handleAddTodo = () => {
     // Create a temp array to add the new todo item
-    const tempArray = [];
-    // Copy the state array todoList to tempArray
-    for (let i = 0; i < todoList.length; i++) {
-      tempArray.push(todoList[i]);
-    }
+    const tempArray = todoList;
+
     // Push the new todo to the end of the array
     tempArray.push(newTodo);
     setTodoList(tempArray); // Update the state variable Todo List with the latest version of tempArray
     setNewTodo(""); // Reset the user's input field
-
-    console.log("todoList: ", todoList);
   };
 
   const handleDelete = (indexToDelete: number) => {
@@ -58,8 +53,6 @@ const Todo: React.FC = () => {
     }
     // Update the todoList state array with the most recent elements of the tempArray
     setTodoList(tempArray);
-
-    console.log("todoList: ", todoList);
   };
 
   // Function will render a formatted version of todoList inside an
