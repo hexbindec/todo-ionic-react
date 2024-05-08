@@ -28,6 +28,7 @@ const Todo: React.FC = () => {
 
   // Function will add the user's input to the todoList state array
   const handleAddTodo = () => {
+    // Create a temp array to add the new todo item
     const tempArray = todoList;
     tempArray.push(newTodo);
     setTodoList(tempArray); // Update the todo list with the new item
@@ -37,7 +38,7 @@ const Todo: React.FC = () => {
   };
 
   const handleDelete = (indexToDelete: number) => {
-    // Create an intermediary array to store only the todo items I want to keep
+    // Create a temp array to store only the todo items I want to keep
     // (and skip the one I want to delete)
     const tempArray = [];
     for (let i = 0; i < todoList.length; i++) {
